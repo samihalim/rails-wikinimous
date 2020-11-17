@@ -1,0 +1,16 @@
+<div class="container ">
+<h1><%= @article.title %></h1>
+
+<p><%= @article.content %></p>
+
+
+
+<%= link_to article_path,
+                        method: :delete,
+                        data: { confirm: 'Are you sure?' } do%>
+          <i class="fas fa-trash-alt"></i>
+        <% end %>
+
+<button type="button" class="btn btn-success"><%= link_to 'Go back to Articles', articles_path%> </button>
+<button type="button" class="btn btn-warning"><%= link_to 'Update Articles', edit_article_path%></button>
+</div>

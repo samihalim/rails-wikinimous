@@ -1,0 +1,16 @@
+<div class="container">
+<h1>Articles</h1>
+<ul style="    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;">
+  <% @articles.each do |article| %>
+  <div class="card" style="width: 20rem">
+  <div class="card-body">
+    <h5 class="card-title"><%= article.title%></h5>
+    <%= link_to 'Go to content', article_path(article), class:"btn btn-primary" %>
+  </div>
+</div>
+  <% end %>
+</ul>
+<p><%= link_to 'Create new article', new_article_path%></p>
+</div>
